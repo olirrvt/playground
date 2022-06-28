@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+
+    </header>
+
+<main>
+    <h1>CADASTRO USUÁRIO</h1>
+    
+    <% if(typeof(errors) != "undefined") { %>
+        <p style="color: red;">NÃO FOI POSSÍVEL REALIZAR O CADASTRO!</p>
+        <ul>
+            <% errors.forEach((error) => { %>
+                <li style="color: red;" ><%= error.msg %></li>
+            <% }) %> 
+        </ul>
+    <% } %>
+
+    <form action="/cadastrar/user" method="POST">
+        <label for="nomeUsuario">Nome</label>
+        <br>
+        <input type="text" placeholder="Digite seu nome..." name="nomeUsuario" id="">
+        <br>
+    
+        <label for="emailUsuario">Email</label>
+        <br>
+        <input type="email" placeholder="Digite seu email..." name="emailUsuario" id="">
+        <br>
+    
+        <label for="senhaUsuario">Senha</label>
+        <br>
+        <input type="password" placeholder="Digite sua senha..." name="senhaUsuario" id="">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
