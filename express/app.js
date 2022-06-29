@@ -56,5 +56,5 @@ app.use('/produto', produtosRouter);
 // Especificando a porta
 
 app.listen(port, () => {
-    console.log(`Serviço na porta: ${port}`)
+    console.log(`Serviço rodando na porta: ${port}`)
 })
